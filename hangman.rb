@@ -1,10 +1,10 @@
 class Hangman
 
-	attr_reader :word
-	attr_accessor :blanks, :guessed_letters
+	# attr_reader :word
+	attr_accessor :blanks, :guessed_letters, :word
 
 	def	initialize(word)
-		@word = "beer"
+		@word = word.downcase!
 		@blanks = "_"*word.length
 		@guessed_letters = []
 	end

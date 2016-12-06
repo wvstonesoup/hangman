@@ -6,8 +6,6 @@ function myFunction() {
             input.type = "text";
             input.name = "text" + i;
             input.id = "guess";
-            input.required = true;
-            input.placeholder = "Enter Name"
             document.getElementById("demo").appendChild(input).value;
         }
     }
