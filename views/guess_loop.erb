@@ -1,0 +1,11 @@
+Okay, <%=name2%>, take another guess.
+
+<form method = "post" action = "guess_loop"> 
+	<input type = "text" minlength="1" maxlength="1" autofocus="autofocus"   name = "user_guess">
+	
+	<%#<input type="hidden" name="user_name" value = <%= name %>
+	<%#<input type = "hidden" name = "user_2_name" value = <%= name2 %> 
+
+	<input type = "submit">
+	<h3> Number of incorrect guesses:  <%=wrong_guesses%> </h3> 
+</form> 

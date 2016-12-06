@@ -3,6 +3,7 @@ Hello <%= name %>. Please enter a word that is 3-7 letters long.
 <form method = "post" action = "word">
 
 <input type = "password" min= "3" max = "7" name = "word" autofocus="autofocus" placeholder="Secret Word" >
+<input type="hidden" name="user_name" value = <%= name %>>
 <input type = "submit">
 
 
