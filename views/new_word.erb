@@ -1,15 +1,18 @@
-Hello <%= name %>. Please enter a word that is 3-7 letters long.
-</p>
-<form method = "post" action = "word">
 
-<input type = "password" min= "3" max = "7" name = "word" autofocus="autofocus" placeholder="Secret Word" >
-<input type="hidden" name="user_name" value = <%= name %>>
-<input type = "submit">
+<div class="form-container">
+	<center><p</p>
+
+Hello <%= name %>. Please enter a secret word that is 3-7 letters long.
+
+	<form action="/word" method="post">
+    <input type = "password" min= "3" max = "7" name = "word" autofocus="autofocus" placeholder="Secret Word" >
+
+	</form>
+    </center>
+</div>
 
 
 
 
-<!-- <script src = "js/dynamic_letter_boxes.js"></script>
- -->
 
 </form>

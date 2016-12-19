@@ -1,6 +1,30 @@
-Welcome! The boxes below represent spaces for the secret word. If you guess correctly, at least one box will be filled in with your letter. An incorrect guess will begin construction of the hangman's gallows.  A list of incorrect letters will display on the screen so you don't waste your guesses, because if you guess wrong 10 times, YOU'RE DEAD! Now, please guess a letter.
+<center>
+ Your secret word is <%= blank_word %>.
+<br>
+<br>
+Guessed Letters <%= guessed_letters.to_s %><br><br>
+Choose a lower case letters or else!
+<br>
+<br>
+<form method="post" action="letter_guess">
+	<input type="text" name="letter_guess" pattern="[a-z]" maxlength="1" autofocus="autofocus" required>
+	<input type="submit">
+</form>
 
-<form method = "post" action = "user_guess"> 
-	<input type = "text" minlength="1" maxlength="1" autofocus="autofocus"   name = "guess">
-	<input type = "submit"> 
-</form> 
+<% if session[:game].chances == 0 %>
+<img class= "loser" src= "/img/rainbow.jpg">
+<% elsif session[:game].chances == 1 %>
+<img class= "loser" src= "/img/rainbow(2).jpg">
+<% elsif session[:game].chances == 2 %>
+<img class= "loser" src= "/img/rainbow(3).jpg">
+<% elsif session[:game].chances == 3 %>
+<img class= "loser" src= "/img/rainbow(4).jpg">
+<% elsif session[:game].chances == 4 %>
+<img class= "loser" src= "/img/rainbow(5).jpg">
+<% elsif session[:game].chances == 5 %>
+<img class= "loser" src= "/img/rainbow(6).jpg">
+<% elsif session[:game].chances == 6 %>
+<img class= "loser" src= "/img/rainbow(7).jpg">
+<h1>If you miss again, the sky will be dark!</H1>
+<%end%>
+

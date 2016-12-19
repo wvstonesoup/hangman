@@ -1,9 +1,16 @@
-Welcome <%= name2 %>! The blanks below represent spaces for the secret word. If you guess correctly, at least one space will be filled in with your letter. An incorrect guess will begin construction of the hangman's gallows.  A list of incorrect letters will display on the screen so you don't waste your guesses, because if you guess wrong 10 times, YOU'RE DEAD! Now, please guess a letter.
+<div class="form-container"> <center>
+
+Welcome <%= name2 %>! 
+The blanks below represent spaces for the secret word. 
+If you guess correctly, at least one box will be filled in with your letter. 
+A list of incorrect letters and the number of chances you have remaining will display on the screen so you don't waste your guesses, 
+because if you guess wrong 7 times, ALL THE COLORS OF THE RAINBOW WILL BE GONE! 
+Now, please guess a letter.
 
 
 
 
-<form method = "post" action = "guess"> 
+<form method = "post" action = "/user_guess"> 
 	<input type = "text" minlength="1" maxlength="1" autofocus="autofocus"   name = "user_guess">
 	
 	<%#<input type="hidden" name="user_name" value = <%= name %>
@@ -12,3 +19,14 @@ Welcome <%= name2 %>! The blanks below represent spaces for the secret word. If 
 	<input type = "submit">
 </form> 
 
+<center>
+ Your secret word is <%= blank_word %>.
+<br>
+<br>
+Incorrect Guesses <%= incorrect_letters.to_s %><br><br>
+Choose a lower case letters or else!
+<br>
+<br>
+<form method="post" action="letter_guess">
+	<input type="text" name="letter_guess" pattern="[a-z]" maxlength="1" autofocus="autofocus" required>
+	<input type="submit">

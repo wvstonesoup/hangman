@@ -4,3 +4,15 @@
 #marv {
     display: block;
 }
+
+.textcolor {color:saddlebrown;} 
+.textcolor1 {color:royalblue;}
+.textcolor2 {color:seagreen;}  
+/*class is started with a period*/
+li{display:inline; padding-right:1.0rem; font-size:1.0rem;}
+ul{text-align:center;}
+li{font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif}
+
+
+img {display: block; margin: auto; width: 20%;}
+/*the above line ceters the images*/
